@@ -13,20 +13,18 @@ Creare una funzione per capire se la parola inserita è palindroma.
     */
 
 const word = prompt('inserisci una parola');
-const wordLetters1 = Array.from(word);
-const wordLetters2 = Array.from(word);
+const topOrder = Array.from(word);
+const bottomOrder = Array.from(word);
 
 for (let i = 0; i < word.length; i++) {
-    let topOrder = (wordLetters1[i]); 
-    console.log(topOrder);   
+    console.log(topOrder[i]); 
 };
 
 for(let i = word.length - 1; i >= 0; i--) {
-    let bottomOrder = (wordLetters2[i]);
-    console.log(bottomOrder);
+    console.log(bottomOrder[i]);
 };
 
-if (topOrder === bottomOrder) {
+if (topOrder[i] === bottomOrder[i]) {
     alert('la parola inserita è palindroma');
 } else {
     alert('la parola inserita non è palindroma');
