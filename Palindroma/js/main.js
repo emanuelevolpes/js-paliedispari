@@ -12,16 +12,31 @@ Creare una funzione per capire se la parola inserita è palindroma.
     - se i valori sono uguali avrò una parola polindroma, sennò no.
     */
 
-const word = prompt('inserisci una parola');
-const topOrder = Array.from(word);
-const bottomOrder = [];
+// const word = prompt('inserisci una parola');
+// const topOrder = Array.from(word);
+// const bottomOrder = [];
 
-for(let i = topOrder.length - 1; i >= 0; i--) {
-    bottomOrder.push(topOrder[i]);
-};
+// for(let i = topOrder.length - 1; i >= 0; i--) {
+//     bottomOrder.push(topOrder[i]);
+// };
 
-if (topOrder.join() === bottomOrder.join()) {
-    alert('la parola inserita è palindroma');
-} else {
-    alert('la parola inserita non è palindroma');
+// if (topOrder.join() === bottomOrder.join()) {
+//     alert('la parola inserita è palindroma');
+// } else {
+//     alert('la parola inserita non è palindroma');
+// };
+
+function palindrome(word) {  
+    const length = word.length;  
+  
+    for (let i = 0; i < length / 2; i++) {  
+        if (word[i] !== word[length - 1 - i]) {  
+          alert( 'la parola non è palindroma'); 
+          return;
+        };  
+    };
+    alert( 'la parola è palindroma');  
 };
+  
+const string = prompt('inserisci una parola: ');  
+const value = palindrome(string);  
